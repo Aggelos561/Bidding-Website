@@ -1,0 +1,10 @@
+.list-group {
+    border: 3px;
+    border-style: solid;
+    border-color: blue;
+    max-height: 250px;
+    margin-bottom: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
