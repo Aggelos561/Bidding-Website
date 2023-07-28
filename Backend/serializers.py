@@ -207,11 +207,6 @@ class ItemSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Country length cannot be more than 20.")
         return country
 
-    def validate_started(self, started):
-        if started <= timezone.now():
-            raise serializers.ValidationError("Start time error.")
-        return started
-
     def validate_ends(self, ended):
         if ended <= timezone.now():
             raise serializers.ValidationError("End time must be in the future.")
