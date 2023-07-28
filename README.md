@@ -1,6 +1,6 @@
 # Bidding Website - Django REST Framework & React
 
-**Note: This project is intended for educational and demonstration purposes only and is not meant for production use. It showcases the integration of Django REST Framework and React to build a bidding website. Please exercise caution and avoid using this project for live deployments.**
+**Note: This project is intended for educational and demonstration purposes only and is not meant for production use. It showcases the integration of Django REST Framework and React to build a bidding website.**
 
 This is a full-stack web application for a bidding website that utilizes Django REST Framework for the backend, React for the frontend, and MySQL as the database. The website allows users to bid on various items, send messages to each other, and provides an intuitive and user-friendly interface for managing bids.
 
