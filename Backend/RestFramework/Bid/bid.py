@@ -69,7 +69,7 @@ class ListMyBids(APIView):
 
     pagination_class = PageNumberPaginationWithCount
     
-    def get(self, request, user_id, format=None):
+    def get(self, request, format=None):
 
         paginator = PageNumberPaginationWithCount()
         bidsObject = Bid.objects.filter(bidder_user=request.user.id).values("item").distinct()

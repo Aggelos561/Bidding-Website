@@ -33,3 +33,10 @@ class IsMessageWriter(permissions.BasePermission):
 
     def has_permission(self, request, view):
         return request.user.id == request.data['sender_id']
+
+
+
+class IsMessageReceiver(permissions.BasePermission):
+
+    def has_permission(self, request, view):
+        return request.user.id == request.data['receiver_id']

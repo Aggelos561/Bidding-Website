@@ -30,15 +30,6 @@ class CreatePictures(APIView):
         return Response({'message': 'Pictures Created'}, status = 200)
 
 
-class ListPictures(APIView):
-
-    serializer_class = PictureSerializer
-
-    def get(self, request, format=None):
-        snippets = Picture.objects.all()
-        serializer = PictureSerializer(snippets, many=True)
-        return Response(serializer.data)
-
 
 class ItemPictures(APIView):
 
@@ -66,6 +57,7 @@ class UploadNewPictures(APIView):
     
     def delete(self, request, item_id, format=None):
         item_obj = Item.objects.get(id=item_id)
+        
         self.check_object_permissions(request, item_obj)
         
         if (Picture.objects.filter(item=item_id).delete()):

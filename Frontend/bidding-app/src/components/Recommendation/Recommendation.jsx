@@ -9,7 +9,7 @@ const Recommendation = () => {
 
 	const getRecommendedItems = async () => {
 		let response = await fetch(
-			`https://localhost:8000/visitation-log-matrix/${auth.profile_id}/`,
+			`https://localhost:8000/visitation-log-matrix/`,
 			{
 				method: "GET",
 				headers: {

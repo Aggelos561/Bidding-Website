@@ -11,7 +11,7 @@ const MyBids = () => {
 			<br />
 			<h3>My Bids</h3>
 			<br />
-			<DisplayAuctions url={`https://localhost:8000/list-mybids/${auth.profile_id}/`} authenticated={true} />
+			<DisplayAuctions url={`https://localhost:8000/list-mybids/`} authenticated={true} />
 
 			<br />
 			<br />

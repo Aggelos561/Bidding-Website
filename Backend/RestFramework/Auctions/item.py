@@ -10,7 +10,7 @@ from BiddingWebsite.pagination import PageNumberPaginationWithCount
 from django_filters.rest_framework import DjangoFilterBackend
 from django_filters import rest_framework as filters, CharFilter
 from rest_framework.generics import ListAPIView
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from ...permissions import *
 
 
@@ -33,15 +33,6 @@ class CreateItems(APIView):
             return Response({'item_id': content, 'type': type, 'status': status.HTTP_201_CREATED})
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-class ListItems(APIView):
-
-    def get(self, request, format=None):
-        snippets = Item.objects.filter(active=True)
-        serializer = ItemSerializer(snippets, many=True)
-        return Response(serializer.data)
 
 
 

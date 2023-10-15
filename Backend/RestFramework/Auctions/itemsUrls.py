@@ -8,8 +8,6 @@ urlpatterns = [
     
     path('create-items/', item.CreateItems.as_view()),
     
-    path('list-items/', item.ListItems.as_view()),
-    
     path('my-items-list/', item.MyItemsList.as_view()),
     
     path('item/<int:pk>/', item.ItemDetails.as_view()),

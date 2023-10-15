@@ -171,7 +171,7 @@ class DeleteMessage(APIView):
 
 	serializer_class = MessageDetailedSerializer
 	authentication_classes = [JWTAuthentication]
-	permission_classes = [IsAuthenticated]
+	permission_classes = [IsAuthenticated, IsMessageReceiver]
 
 	def get_object(self, message_id):
 		try:
@@ -180,6 +180,7 @@ class DeleteMessage(APIView):
 			raise Http404
 
 	def delete(self, request, message_id, format=None):
+		self.check_permissions(request)
 
 		if (isHiddenMessage(message_id)):
 			snippet = self.get_object(message_id)
