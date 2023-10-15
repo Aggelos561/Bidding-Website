@@ -217,6 +217,11 @@ class ItemSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({"Description cannot be more than 2000 characters."})
         return desc
     
+    def validate_numberofbids(self, bids):
+        if int(bids) > 0:
+            raise serializers.ValidationError({"Cannot update auction since bids have been made"})
+        return bids
+    
     def validate(self, data):
         if data['started'] >= data['ends']:
             raise serializers.ValidationError("Start time must be smaller than end time.")

@@ -180,10 +180,10 @@ class DeleteMessage(APIView):
 			raise Http404
 
 	def delete(self, request, message_id, format=None):
-		self.check_permissions(request)
+		snippet = self.get_object(message_id)
+		self.check_object_permissions(request, snippet)
 
 		if (isHiddenMessage(message_id)):
-			snippet = self.get_object(message_id)
 			snippet.delete()
 			return Response(status=status.HTTP_204_NO_CONTENT)
 

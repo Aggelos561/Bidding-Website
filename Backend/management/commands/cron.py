@@ -33,6 +33,9 @@ def createMatrix():
 
             usersItems.append(userVisitLogs)
 
+    return usersItems
+
+
 
 def FindTopRecommendations(users_items):
 
@@ -60,10 +63,8 @@ def updateDBLogs(users_items):
 
 
 def recom_system():
-
-    createMatrix()
     
-    mf = MatrixFactorization()
+    mf = MatrixFactorization(createMatrix())
     factorizedUserItems = mf.begin()
 
     factorizedUserItems = FindTopRecommendations(factorizedUserItems)

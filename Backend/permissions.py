@@ -24,7 +24,7 @@ class IsBidder(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:
             return True
-        
+
         return obj.seller_user.user.id != request.user.id
 
 
@@ -38,5 +38,8 @@ class IsMessageWriter(permissions.BasePermission):
 
 class IsMessageReceiver(permissions.BasePermission):
 
-    def has_permission(self, request, view):
-        return request.user.id == request.data['receiver_id']
+    def has_object_permission(self, request, view, obj):
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        
+        return obj.receiver_id.id == request.user.id or obj.sender_id.id == request.user.id
