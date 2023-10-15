@@ -20,8 +20,8 @@ class UserList(ListAPIView):
             user_serializer = UserRegisterSerializer(snippets, many=True)
             return Response(user_serializer.data)
 
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
     def post(self, request, *args, **kwargs):
@@ -48,8 +48,8 @@ class UserDetail(APIView):
             snippet = self.get_object(pk)
             serializer = UserRegisterSerializer(snippet)
             return Response(serializer.data)
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
     def put(self, request, pk, format=None):
@@ -62,8 +62,8 @@ class UserDetail(APIView):
                 return Response(serializer.data)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
     
@@ -73,6 +73,6 @@ class UserDetail(APIView):
             snippet.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

@@ -1,12 +1,12 @@
 // Utility functions used in components
 
 export const getTimeFormat = (date) => {
-	var day = String(date.getDate()).padStart(2, "0");
-	var month = String(date.getMonth() + 1).padStart(2, "0");
-	var year = date.getFullYear();
-	var hour = date.getHours();
-	var minutes = date.getMinutes();
-	var seconds = date.getSeconds();
+	let day = String(date.getDate()).padStart(2, "0");
+	let month = String(date.getMonth() + 1).padStart(2, "0");
+	let year = date.getFullYear();
+	let hour = date.getHours();
+	let minutes = date.getMinutes();
+	let seconds = date.getSeconds();
 
 	return year + "-" + month + "-" + day + "T" + hour + ":" + minutes + ":" + seconds + "Z";
 };

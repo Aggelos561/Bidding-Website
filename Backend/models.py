@@ -65,7 +65,6 @@ class Item(models.Model):
         unique_together = (('id', 'seller_user'),)
 
 
-
 def upload_path(instance, filename):
     return '/'.join([str(instance.item), filename])
 
@@ -132,7 +131,6 @@ class HideMessage(models.Model):
     class Meta:
         managed = True
         db_table = 'hide_message'
-
 
 
 class VisitationLog(models.Model):

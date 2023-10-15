@@ -17,8 +17,8 @@ class UserProfileRegister(generics.ListAPIView):
             user_serializer = UserProfileRegisterSerializer(snippets, many=True)
             return Response(user_serializer.data)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
     def post(self, request, *args, **kwargs):

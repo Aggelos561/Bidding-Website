@@ -61,7 +61,7 @@ const Register = () => {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(json_structure),
 			}).then((data) => {
-				console.log(data.status);
+
 				if (!data.ok) {
 					userExistsError.userAlreadyExists =
 						"A user with that username or email already exists";

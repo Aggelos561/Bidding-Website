@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { validEmail } from "../../Helper/helper";
+import { validEmail } from "../../helper/helpers";
 
 const Email = (props) => {
 	const [emailErr, setEmailErr] = useState({});

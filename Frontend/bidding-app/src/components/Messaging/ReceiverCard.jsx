@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { formatDate } from "../../Helper/helper";
+import { formatDate } from "../../helper/helpers";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 

@@ -6,7 +6,7 @@ import BiddingForm from "../Forms/BiddingForm";
 import ShowMap from "../Maps/ShowMap";
 import Form from "react-bootstrap/Form";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { formatDate } from "../../Helper/helper";
+import { formatDate } from "../../helper/helpers";
 import AuctionBidsList from "../BidsList/AuctionBidsList";
 import Loading from "../Loading/Loading";
 

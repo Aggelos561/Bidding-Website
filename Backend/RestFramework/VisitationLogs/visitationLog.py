@@ -20,8 +20,8 @@ class VisitationLogList(APIView):
             visitationLogSerializer = VisitationLogSerializer(snippets, many=True)
             return Response(visitationLogSerializer.data)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
 
     def post(self, request, format=None):
@@ -75,5 +75,5 @@ class AcquireRecommendations(APIView):
             serializer = ItemSerializer(recommendedItems, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)

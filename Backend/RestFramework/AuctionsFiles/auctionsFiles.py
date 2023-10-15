@@ -185,8 +185,8 @@ class CreateAuctionFiles(APIView):
 
             return Response(status=status.HTTP_201_CREATED)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthProvider from "../../context/AuthProvider";
-import { getCurrentDate, to2Decimal } from "../../Helper/helper";
+import { getCurrentDate, to2Decimal } from "../../helper/helpers";
 import BidAmount from "./BidAmount";
 import ModalPopUp from "../PopUp/ModalPopUp";
 import Button from "react-bootstrap/Button";

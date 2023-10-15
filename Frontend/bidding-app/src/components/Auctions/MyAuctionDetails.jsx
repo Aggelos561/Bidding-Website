@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ImageGallery from "react-image-gallery";
 import AuthProvider from "../../context/AuthProvider";
-import { getTimeFormat } from "../../Helper/helper";
+import { getTimeFormat } from "../../helper/helpers";
 import ProductNameForm from "../Forms/ProductNameForm";
 import ImagesUpload from "../Forms/ImagesUpload";
 import PriceForm from "../Forms/PriceForm";

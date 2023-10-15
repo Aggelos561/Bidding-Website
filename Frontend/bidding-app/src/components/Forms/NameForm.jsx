@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { validNameFormat } from "../../Helper/helper";
+import { validNameFormat } from "../../helper/helpers";
 
 const NameForm = (props) => {
 	const [nameErr, setNameErr] = useState({});

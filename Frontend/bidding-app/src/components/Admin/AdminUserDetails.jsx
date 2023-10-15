@@ -230,7 +230,7 @@ const AdminUserDetails = () => {
 
 							<br />
 							<br />
-							<Button onClick={update}>Update User Data</Button>
+							<Button onClick={update}>Update User</Button>
 						</div>
 					</div>
 				</div>

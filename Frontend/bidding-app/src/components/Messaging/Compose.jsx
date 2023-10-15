@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 import AuthProvider from "../../context/AuthProvider";
-import { getTimeFormat } from "../../Helper/helper";
+import { getTimeFormat } from "../../helper/helpers";
 import Loading from "../Loading/Loading";
 
 const Compose = () => {

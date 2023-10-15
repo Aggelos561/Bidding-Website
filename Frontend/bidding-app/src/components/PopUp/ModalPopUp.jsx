@@ -16,7 +16,7 @@ const ModalPopUp = (props) => {
 					<Modal.Title>Confirmation</Modal.Title>
 				</Modal.Header>
 
-				<Modal.Body>Are you sure you would like to submit for this auction?</Modal.Body>
+				<Modal.Body>Are you sure you want to proceed and place your bid for this auction?</Modal.Body>
 
 				<Modal.Footer>
 					<Button variant="secondary" onClick={() => props.setShow(false)}>

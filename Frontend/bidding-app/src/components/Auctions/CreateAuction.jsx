@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthProvider from "../../context/AuthProvider";
-import { getTimeFormat } from "../../Helper/helper";
+import { getTimeFormat } from "../../helper/helpers";
 import ProductNameForm from "../Forms/ProductNameForm";
 import PriceForm from "../Forms/PriceForm";
 import DateForm from "../Forms/DateForm";

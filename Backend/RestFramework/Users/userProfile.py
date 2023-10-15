@@ -47,8 +47,8 @@ class UsernameProfileDetail(APIView):
             userProfileSerializer = UserProfileRegisterSerializer(profile_snippet)
             return Response(userProfileSerializer.data)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
 
@@ -70,8 +70,8 @@ class IdProfileDetail(APIView):
             userProfileSerializer_data["rating"] = Seller.objects.get(user__id=profile_id).rating
             return Response(userProfileSerializer_data)
         
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 
@@ -97,5 +97,5 @@ class UpdateUserProfile(APIView):
                 return Response(userProfileSerializer.data, status=status.HTTP_201_CREATED)
             return Response(userProfileSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        except Exception as exc:
-            return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)

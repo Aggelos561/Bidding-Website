@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthProvider from "../../context/AuthProvider";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useEffect } from "react";
-import { useState } from "react";
+import AuthProvider from "../../context/AuthProvider";
 
 const Header = () => {
 	const { auth, setAuth } = useContext(AuthProvider);

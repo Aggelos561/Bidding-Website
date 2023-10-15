@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { isNumeric } from "../../Helper/helper";
+import { isNumeric } from "../../helper/helpers";
 
 const NumberForm = (props) => {
 	const [numberErr, setNumberErr] = useState({});

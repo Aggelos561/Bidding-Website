@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { onlyLetters } from "../../Helper/helper";
+import { onlyLetters } from "../../helper/helpers";
 
 const LocationForm = (props) => {
 	const [locationErr, setLocationErr] = useState({});

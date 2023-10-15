@@ -83,8 +83,8 @@ class ReceiverMessageCard(APIView):
 
 			return Response(serializer.data)
 		
-		except Exception as exc:
-			return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+		except Exception:
+			return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 
@@ -116,8 +116,8 @@ class SenderMessageCard(APIView):
 
 			return Response(serializer.data)
 		
-		except Exception as exc:
-			return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+		except Exception:
+			return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 
@@ -209,5 +209,5 @@ class CountUnreadMessages(APIView):
 
 			return Response({"count" : len(snippets)}, status=status.HTTP_200_OK)
 		
-		except Exception as exc:
-			return Response({"error": str(exc)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+		except Exception:
+			return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import AuthProvider from "../../context/AuthProvider";
-import { formatDate } from "../../Helper/helper";
+import { formatDate } from "../../helper/helpers";
 import Form from "react-bootstrap/Form";
 import Loading from "../Loading/Loading";
 

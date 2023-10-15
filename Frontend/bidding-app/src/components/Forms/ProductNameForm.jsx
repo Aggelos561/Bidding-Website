@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { lettersNumbers } from "../../Helper/helper";
+import { lettersNumbers } from "../../helper/helpers";
 
 const ProductNameForm = (props) => {
 	const [nameErr, setNameErr] = useState({});
